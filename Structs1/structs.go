@@ -14,7 +14,7 @@ func (h Human) GetName() {
 
 type Action struct {
 	ActionName string
-	Human
+	Human      // аналог наследования
 }
 
 func (a Action) MakeAction() {
