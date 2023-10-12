@@ -1,17 +1,11 @@
-package main
+package Conc
 
 import (
 	"fmt"
-
 	"time"
 )
 
-func check(tm int, ch chan<- bool) {
-	time.Sleep(time.Duration(tm) * time.Second)
-	ch <- true
-}
-
-func main() {
+func t5() {
 	var (
 		tm   int
 		data string
@@ -30,7 +24,7 @@ func main() {
 	for {
 		select {
 		case <-timeout:
-			fmt.Println("Done")
+			fmt.Println("Done") // Как только закончиться таймер, программа выйдет.
 			return
 		case res := <-dataCh:
 			fmt.Println("From channel <-", res)
