@@ -1,11 +1,11 @@
-package main
+package Conc
 
 import (
 	"fmt"
 	"sync"
 )
 
-func main() {
+func T9() {
 	in := make(chan int)
 	out := make(chan int)
 	x := []int{1, 2, 3, 4, 5}
@@ -34,8 +34,4 @@ func main() {
 		wg.Done()
 	}()
 	wg.Wait()
-}
-
-func multiplier() {
-
 }

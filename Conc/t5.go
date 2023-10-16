@@ -15,7 +15,7 @@ func t5() {
 	timeout := time.After(time.Duration(tm) * time.Second)
 	dataCh := make(chan string)
 
-	go func() {
+	go func() { //запись в канал
 		for {
 			fmt.Scan(&data)
 			dataCh <- data
@@ -26,7 +26,7 @@ func t5() {
 		case <-timeout:
 			fmt.Println("Done") // Как только закончиться таймер, программа выйдет.
 			return
-		case res := <-dataCh:
+		case res := <-dataCh: // чтение из канала
 			fmt.Println("From channel <-", res)
 		}
 	}
