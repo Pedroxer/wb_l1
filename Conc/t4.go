@@ -2,21 +2,11 @@ package Conc
 
 import (
 	"fmt"
-	"math/rand"
+	"github.com/Pedroxer/wbl_l1/util"
 	"os"
 	"os/signal"
 	"syscall"
 )
-
-func randomString(n int) string {
-	var key = []byte("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
-
-	res := ""
-	for i := 0; i < n; i++ {
-		res += string(key[rand.Intn(len(key))])
-	}
-	return res
-}
 
 func Conc4() {
 	fmt.Print("N = ")
@@ -45,7 +35,7 @@ func Conc4() {
 				return
 
 			default:
-				data := randomString(5)
+				data := util.RandomString(5)
 				datach <- data
 			}
 		}
