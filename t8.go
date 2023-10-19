@@ -16,7 +16,7 @@ func Off(n int64, i int) int64 {
 	return n & ^(1 << (i - 1))
 }
 
-func Demo() {
+func main() {
 
 	var p int64 = 32
 

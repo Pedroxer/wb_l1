@@ -1,4 +1,4 @@
-package Conc
+package main
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ func calc(i int, mas []int, wg *sync.WaitGroup) {
 	wg.Done()
 }
 
-func Conc2() {
+func main() {
 	var wg sync.WaitGroup
 	mas := []int{2, 4, 6, 8, 10}
 	for i := 0; i < len(mas); i++ {

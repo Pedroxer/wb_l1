@@ -1,4 +1,4 @@
-package Conc
+package main
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ func calc2(i int, mas []int, wg *sync.WaitGroup, out chan int) {
 	wg.Done()
 }
 
-func Conc3() {
+func main() {
 	var wg sync.WaitGroup
 	mas := []int{2, 4, 6, 8, 10}
 	sum := 0

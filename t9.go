@@ -1,11 +1,11 @@
-package Conc
+package main
 
 import (
 	"fmt"
 	"sync"
 )
 
-func T9() {
+func main() {
 	in := make(chan int)
 	out := make(chan int)
 	x := []int{1, 2, 3, 4, 5}

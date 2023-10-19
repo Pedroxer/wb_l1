@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func Swap() {
+func main() {
 	a := 5
 	b := 6
 	fmt.Println("Before a = ", a, " ", "b = ", b)

@@ -1,4 +1,4 @@
-package Conc
+package main
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"syscall"
 )
 
-func Conc4() {
+func main() {
 	fmt.Print("N = ")
 	var worker int
 	fmt.Scan(&worker)

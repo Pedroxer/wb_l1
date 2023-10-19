@@ -16,12 +16,13 @@ package main
 
 // Решением может быть создание новой строки и копирования в неё строки v с помощью copy.
 // Таким образом, мы можем ограничить кол-во занимаемой памяти.
-
 var justString string
 
 func someFunc() {
 	v := createHugeString(1 << 10)
-	justString = string(copy(make([]byte, 100), v))
+	tmp := make([]byte, 100)
+	copy(tmp, v[:100])
+	justString = string(tmp)
 }
 
 func main() {

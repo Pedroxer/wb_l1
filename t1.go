@@ -1,4 +1,4 @@
-package Structs1
+package main
 
 import "fmt"
 
@@ -21,7 +21,7 @@ func (a Action) MakeAction() {
 	fmt.Println(a.Human.Name + " make " + a.ActionName)
 }
 
-func Demo() {
+func main() {
 	a := &Action{
 		ActionName: "cook",
 	}

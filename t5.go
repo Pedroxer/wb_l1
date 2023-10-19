@@ -1,11 +1,11 @@
-package Conc
+package main
 
 import (
 	"fmt"
 	"time"
 )
 
-func t5() {
+func main() {
 	var (
 		tm   int
 		data string

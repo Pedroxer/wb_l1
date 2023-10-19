@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func CreateSet() {
+func main() {
 	str := []string{"cat", "cat", "dog", "cat", "tree"}
 	set := make(map[string]struct{})
 	for _, val := range str {

@@ -27,7 +27,7 @@ func Intersect(map1, map2 *map[int]struct{}) map[int]struct{} {
 	return res
 }
 
-func Set1() {
+func main() {
 	map1 := randMap()
 	map2 := randMap()
 	fmt.Println("before intersect")

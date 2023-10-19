@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func Interfaces() {
+func main() {
 	var inter interface{} = make(chan int)
 	switch inter.(type) {
 	case int:

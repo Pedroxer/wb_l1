@@ -1,4 +1,4 @@
-package Conc
+package main
 
 import (
 	"context"
@@ -6,8 +6,8 @@ import (
 	"sync"
 )
 
-func Goroutins() {
-	var wg *sync.WaitGroup
+func main() {
+	var wg sync.WaitGroup
 	// Читающая из канала горутина завершит работу при закрытии канала
 	wg.Add(1)
 	op := make(chan int)
